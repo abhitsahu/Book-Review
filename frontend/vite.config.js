@@ -8,12 +8,12 @@ export default defineConfig({
     host: '0.0.0.0',  // Required for Render
     port: process.env.PORT || 5173, // Use Render's assigned port or fallback to 5173
     strictPort: true,
-    allowedHosts: ['mern-todo-project-bna7.onrender.com'],  // Allow your Render domain
+    allowedHosts: ['book-review-frontend-4dsn.onrender.com'],  // Allow your Render domain
   },
   preview: {
-    port: process.env.PORT || 5173,
+    port: process.env.PORT || 4173,
     host: '0.0.0.0',
-    allowedHosts: ['mern-todo-project-bna7.onrender.com'],
+    allowedHosts: ['book-review-frontend-4dsn.onrender.com'],
   },
 
 })
