@@ -1,0 +1,49 @@
+/* BookDetails.css */
+.book-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the start */
+  padding: 20px; /* Add padding to the container */
+  margin-top: 50px; /* Move the book details down */
+}
+
+.book-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 600px; /* Limit max width for larger screens */
+  text-align: left; /* Align text to the left */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .book-card {
+    max-width: 90%; /* Allow more width on smaller screens */
+  }
+}
+
+.review {
+  border-top: 1px solid #eaeaea; /* Divider for reviews */
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.review:first-child {
+  border-top: none; /* Remove top border for the first review */
+}
+
+.review-button {
+  padding: 10px 20px;
+  background-color: #ff7e5f; /* Pastel coral */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.review-button:hover {
+  background-color: #e76b4f; /* Darker coral on hover */
+} 

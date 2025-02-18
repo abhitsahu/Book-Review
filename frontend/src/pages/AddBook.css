@@ -1,0 +1,121 @@
+.add-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background color */
+  min-height: 50vh; /* Full height */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+  width: 400px;
+  border-radius: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333; /* Darker text color */
+  animation: fadeIn 0.5s ease; /* Fade-in animation */
+}
+
+.add-book-form {
+  width: 100%;
+  max-width: 500px; /* Limit max width for larger screens */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  animation: slideIn 0.5s ease; /* Slide-in animation */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+input:focus, textarea:focus {
+  border-color: #007bff; /* Change border color on focus */
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.btn {
+  background-color: #007bff; /* Primary button color */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .add-book {
+    padding: 15px;
+    width: 300px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .add-book-form {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .form-group {
+    margin-bottom: 10px; /* Reduce margin for smaller screens */
+  }
+
+  input, textarea {
+    padding: 8px; /* Adjust padding for inputs */
+    font-size: 0.9em; /* Slightly smaller font size */
+  }
+
+  .btn {
+    padding: 8px 12px; /* Adjust button padding */
+    font-size: 0.9em; /* Slightly smaller font size */
+  }
+}

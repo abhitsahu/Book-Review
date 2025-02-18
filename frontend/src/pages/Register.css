@@ -1,0 +1,127 @@
+/* Register.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #a8e0d4, #f6d6a8); /* Pastel gradient */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-field:focus {
+  border-color: #a8e0d4; /* Pastel teal */
+  outline: none;
+  box-shadow: 0 0 5px rgba(168, 224, 212, 0.5);
+}
+
+.register-button {
+  width: 100%;
+  padding: 10px;
+  background: #f6d6a8; /* Pastel yellow */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.register-button:hover {
+  background: #e2b94c; /* Slightly darker pastel yellow */
+  transform: scale(1.05);
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  color: green;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .register-container {
+    padding: 30px;
+  }
+
+  .register-form h2 {
+    font-size: 1.8em;
+  }
+
+  .input-field {
+    padding: 12px;
+  }
+
+  .register-button {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    padding: 20px;
+  }
+
+  .register-form h2 {
+    font-size: 1.5em;
+  }
+
+  .input-field {
+    padding: 10px;
+  }
+
+  .register-button {
+    padding: 10px;
+  }
+} 

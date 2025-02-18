@@ -1,0 +1,29 @@
+/* BookList.css */
+.book-list-container {
+  display: flex;
+  flex-direction: column; /* Stack books vertically */
+  align-items: center; /* Center align items */
+  padding: 20px; /* Add padding */
+  overflow-y: auto; /* Allow vertical scrolling if needed */
+  max-width: 100%; /* Ensure it does not exceed the screen width */
+  margin: 0 auto; /* Center the container */
+  margin-top: 600px; /* Adjust for navbar height */
+}
+
+.book-card {
+  width: 100%; /* Ensure book cards take full width */
+  max-width: 600px; /* Limit width for better readability */
+  margin: 10px 0; /* Space between book cards */
+  transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.book-card:hover {
+  transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .book-card {
+    max-width: 90%; /* Allow more width on smaller screens */
+  }
+} 

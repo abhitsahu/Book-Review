@@ -1,0 +1,57 @@
+/* About.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #a8e0d4, #f6d6a8); /* Pastel gradient */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.about-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-container p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.learn-more-button {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: white;
+  background-color: #ff7e5f; /* Pastel coral */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Added transform transition */
+}
+
+.learn-more-button:hover {
+  background-color: #e76b4f; /* Darker coral on hover */
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

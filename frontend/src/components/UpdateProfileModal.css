@@ -1,0 +1,93 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px; /* Limit max width for larger screens */
+  transition: all 0.3s ease; 
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Primary button color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.cancel {
+  background-color: #dc3545; /* Danger button color */
+}
+
+.cancel:hover {
+  background-color: #c82333; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  input {
+    padding: 8px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+  }
+} 

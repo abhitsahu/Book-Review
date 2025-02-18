@@ -1,0 +1,105 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #a8e0d4; /* Pastel teal */
+    padding: 10px 20px;
+    width: 100%; /* Set width to 100% */
+    position: fixed; 
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    z-index: 1000; /* Ensure it stays above other content */
+  }
+  
+  .navbar:hover {
+    background-color: #a0d3c1; /* Darker pastel teal on hover */
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+    color: #ff7e5f; /* Pastel coral */
+  }
+  
+  /* Mobile Menu */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: transform 0.3s;
+  }
+  
+  /* Dropdown Menu for Mobile */
+  @media (max-width: 768px) {
+    .menu {
+      display: none; /* Hide menu by default */
+      flex-direction: column;
+      position: absolute;
+      top: 60px; /* Adjust based on navbar height */
+      left: 0;
+      right: 0;
+      background-color: #a8e0d4; /* Pastel teal */
+      padding: 10px 0;
+      animation: slideDown 0.3s ease forwards;
+    }
+  
+    .menu.open {
+      display: flex; /* Show menu when open */
+    }
+  
+    .menu-toggle {
+      display: flex; /* Show hamburger icon */
+    }
+  
+    .bar.open {
+      transform: rotate(45deg);
+      margin: 0;
+    }
+  
+    .bar:nth-child(2).open {
+      opacity: 0; /* Hide the middle bar */
+    }
+  
+    .bar:nth-child(3).open {
+      transform: rotate(-45deg);
+      margin: 0;
+    }
+  }
+  
+  /* Animation */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
