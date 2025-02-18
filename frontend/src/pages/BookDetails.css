@@ -1,49 +1,100 @@
-/* BookDetails.css */
+/* Book Card Styling */
 .book-details-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Align items to the start */
-  padding: 20px; /* Add padding to the container */
-  margin-top: 50px; /* Move the book details down */
+  align-items: center;
+  padding: 20px;
 }
 
 .book-card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 20px;
   width: 100%;
-  max-width: 600px; /* Limit max width for larger screens */
-  text-align: left; /* Align text to the left */
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .book-card {
-    max-width: 90%; /* Allow more width on smaller screens */
-  }
+.book-card:hover {
+  transform: scale(1.02);
 }
 
-.review {
-  border-top: 1px solid #eaeaea; /* Divider for reviews */
-  padding-top: 10px;
+/* Button Styling */
+.review-button, .view-reviews-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.review-button:hover, .view-reviews-button:hover {
+  background: #0056b3;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Review List in Modal */
+.review-list {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.review-item {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
   margin-top: 10px;
 }
 
-.review:first-child {
-  border-top: none; /* Remove top border for the first review */
-}
+@media (max-width: 768px) {
+  .book-card {
+    padding: 15px;
+  }
 
-.review-button {
-  padding: 10px 20px;
-  background-color: #ff7e5f; /* Pastel coral */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  .modal-content {
+    width: 90%;
+    max-width: 400px;
+  }
 }
-
-.review-button:hover {
-  background-color: #e76b4f; /* Darker coral on hover */
-} 

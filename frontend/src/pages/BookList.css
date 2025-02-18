@@ -1,29 +1,43 @@
-/* BookList.css */
 .book-list-container {
   display: flex;
-  flex-direction: column; /* Stack books vertically */
-  align-items: center; /* Center align items */
-  padding: 20px; /* Add padding */
-  overflow-y: auto; /* Allow vertical scrolling if needed */
-  max-width: 100%; /* Ensure it does not exceed the screen width */
-  margin: 0 auto; /* Center the container */
-  margin-top: 600px; /* Adjust for navbar height */
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 100px;
 }
 
-.book-card {
-  width: 100%; /* Ensure book cards take full width */
-  max-width: 600px; /* Limit width for better readability */
-  margin: 10px 0; /* Space between book cards */
-  transition: transform 0.3s; /* Add transition for hover effect */
+h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.book-card:hover {
-  transform: scale(1.02); /* Slightly scale up on hover */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .book-card {
-    max-width: 90%; /* Allow more width on smaller screens */
-  }
-} 
+.pagination button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
