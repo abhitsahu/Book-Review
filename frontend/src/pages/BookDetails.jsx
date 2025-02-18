@@ -14,7 +14,7 @@ const BookDetails = ({ book }) => {
   // Fetch reviews
   const fetchReviews = useCallback(async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/reviews/${book._id}`);
+      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/reviews/${book._id}`);
       setReviews(response.data);
     } catch (error) {
       console.error('Error fetching reviews:', error);

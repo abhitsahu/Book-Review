@@ -11,7 +11,7 @@ const BookList = () => {
 
   const fetchBooks = async (pageNumber) => {
     try {
-      const response = await axios.get(`http://localhost:5000/books/book?page=${pageNumber}&limit=5`); // Fetch books with pagination
+      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/books/book?page=${pageNumber}&limit=5`); // Fetch books with pagination
       setBooks(response.data.books);
       setTotalPages(response.data.totalPages);
     } catch (error) {
