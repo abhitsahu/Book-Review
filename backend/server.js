@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 const allowedOrigins = [
     "http://localhost:5173",
-    "https://mern-todo-project-bna7.onrender.com"
+    "https://book-review-frontend-4dsn.onrender.com"
 ];
 
 app.use(cors({
